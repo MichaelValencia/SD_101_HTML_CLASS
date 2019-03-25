@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <style>
+        #theIdOfTheBox {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            width: 300px;
+            height: 300px;
+            background: blue;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="theIdOfTheBox">box</div>
+    <p>A function is triggered when the user is pressing a key in the input field.</p>
+
+    <input id='type' type="text">
+    <div id='msg'>hello </div>
+</body>
+
+</body>
+
+</html>    <script>
+    document.getElementById("type").addEventListener("keydown", myEvent);
+
+function myEvent() {
+document.getElementById("msg").innnerHtml += event.charCode;
+}
+
+
+
+var speed, // the box will move by 10 pixels on every step
+        direction, // 1 = move right; -1 = move left
+        boxElement;
+    window.onload = function () {
+        speed = 10, // the box will move by 10 pixels on every step
+            direction = 1, // 1 = move right; -1 = move left
+            boxElement = document.getElementById('theIdOfTheBox');
+
+        if (boxElement) {
+            boxElement.addEventListener('mouseover', moveLeftRight);
+            boxElement.addEventListener('mousemove', moveLeftRight);
+            boxElement.addEventListener('click', moveUpDown);
+            boxElement.addEventListener('keydown', moveUpDown);
+        }
+    };
+
+    function moveUpDown() {
+        // Calculate and store some of the box coordinates:
+        var boxTopPos = boxElement.offsetTop,
+            boxBottomPos = boxTopPos + boxElement.offsetHeight;
+        // When right side of the box goes too far - change direction:
+        if (boxBottomPos > document.body.offsetHeight) {
+            direction = -1;
+        }
+        // When left side of the box goes too far - change direction:
+        if (boxTopPos < 0) {
+            direction = 1;
+        }
+        // Recalculate position:
+        boxElement.style.top = (boxTopPos + speed * direction) + 'px';
+    }
+
+    function moveLeftRight() {
+        // Calculate and store some of the box coordinates:
+        var boxLeftPos = boxElement.offsetLeft,
+            boxRightPos = boxLeftPos + boxElement.offsetWidth;
+        // When right side of the box goes too far - change direction:
+        if (boxRightPos > document.body.offsetWidth) {
+            direction = -1;
+        }
+        // When left side of the box goes too far - change direction:
+        if (boxLeftPos < 0) {
+            direction = 1;
+        }
+        // Recalculate position:
+        boxElement.style.left = (boxLeftPos + speed * direction) + 'px';
+    }
+</script>
+
+
+</html>

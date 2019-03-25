@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <style>
+        div{
+            color:limegreen;
+            border: 2px dashed green;
+            background-color: black;
+            text-align: right;
+            width: 40%;
+            float: left;
+            padding: 5px;
+            margin: 10px;
+            font-family: "times new roman", Times, serif;
+            font-size:20pt;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="text" id="txt1">this is some text in a div</div>
+    <div class="text" id="txt2">im a programmer!!!!</div>
+    <input type="color" id="color">
+    <button id="btn">Change Colors</button>
+</body>
+<script>
+    document.getElementById("color").addEventListener("change", function () {
+        document.getElementById("txt1").style.backgroundColor = document.getElementById("color").value;
+        document.getElementById("txt2").style.backgroundColor = document.getElementById("color").value;
+    });
+    document.getElementById("btn").addEventListener("click", function () {
+        document.body.style.background = "red";
+        document.getElementById("btn").style.background = "red"
+    })
+</script>
+
+</html>

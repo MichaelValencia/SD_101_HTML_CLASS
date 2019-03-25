@@ -1,0 +1,16 @@
+header{
+    background-image: url("../images/wavylines.jpg");
+    height:200px;
+}
+body{
+    background-color:black;
+    color:green;
+}
+footer{
+    background-image: url("../images/wavylines.jpg");
+    height: 100px;
+}
+
+footer em, strong{
+    background:white;
+}

@@ -1,0 +1,48 @@
+<DOCTYPE HTML>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>AddMovie</title>
+    </head>
+
+    <body>
+
+        <h1>
+            <bold>Add a Movie</bold>
+        </h1>
+        <form>
+            <fieldset>
+                <div style="text-align:right;font-weight: bold;float:left;width:200px;padding: 5px;line-height: 30px;">
+                    <label for="txtTitle">Title:</label><br>
+                    <label for="txtReleaseDate">Release date:</label><br>
+                    <label for="txtDirector">Director:</label><br>
+                    <label for="movieRating">Rating:</label><br>
+                    <label for="rutimehours">Runtime Hours:</label><br>
+                    <label for="minutes">Minutes:</label><br>
+                    <label for="txtPlot" >Plot:</label><br><br><br><br>
+                    <label for="filename">Upload Image:</label><br>
+                </div>
+                <div style="line-height:40px;width: 200px;float:left;padding:0px 10px">
+                    <input type="text" name="txtTitle" id="txtTitle"> <br>
+                    <input type="text" name="txtReleaseDate" id="txtReleaseDate"><br>
+                    <input type="text" name="txtDirector" id="txtDirector"> <br>
+                    <select id="movieRating">
+                        <option value="1">G</option>
+                        <option value="2">PG</option>
+                        <option value="3">PG-13</option>
+                        <option value="4">R</option>
+                    </select><br>
+                    <input type="number" name="runtimeHours">
+                    <br>
+                    <input type="number" name="minutes"><br>
+                    <textarea name="txtplot" id="" cols="10" rows="5" style="margin-bottom: 20px;margin-top:10px;"></textarea>
+                    <input type="file" name="filename" accept="image/gif, image/jpeg, image/png" style="margin-top:20px;"><br><br><br>
+                    <button type="submit">Save</button>
+                </div>
+               
+            </fieldset>
+        </form>
+    </body>
+
+    </html>

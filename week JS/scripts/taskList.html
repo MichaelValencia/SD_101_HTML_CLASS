@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<style>.listitem:hover{
+    cursor: pointer;
+}
+</style>
+<head>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            document.getElementById("addTask").addEventListener("click",function(){
+                var list = document.getElementById('list');
+                var listitem= document.createElement('li');
+                var chk = document.createElement('input');
+                chk.type = "checkbox";
+                listitem.appendChild(chk)
+                var divText= document.createElement('div');
+                divText.innerText
+
+            })
+        })
+        
+    </script>
+</head>
+
+<body>
+    <input type="text" id=TaskText><br>
+    <button id='addTask'>Add Task</button>
+</body>
+
+</html>

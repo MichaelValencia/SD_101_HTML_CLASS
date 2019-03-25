@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+        function calculateTip(){
+            multiplier=0;
+            var billAmount = document.getElementById('billAmount').value;
+            var sLevel = document.getElementById('serviceLevel').value;
+            multiplier=(sLevel*.05) +.05;
+            document.getElementById('total'.innerText = '$ ' + (billAmount*multiplier).toFixed(2);
+        </script>
+    </head>
+    <body>
+        <div style='width:600px; border:1px solid black'>
+        Enter Tip Amount:<br>
+        <input type='number' min="0.01" step="0.01" max="2500" value='0.00' id='billAmount'>
+        <br>
+        how good was the service:
+        <select id='serviceLevel'>
+            <option value="0"> horrible</option>
+            <option value="1"> bad</option>
+            <option value="2"> fair</option>
+            <option value="3"> good</option>
+            <option value="4"> fantastic</option>
+        </select>
+        <br>
+        <button onclick='calculateTip();'>calculate Tip</button>
+    </div id=total></div>
+    </body>
+</html>

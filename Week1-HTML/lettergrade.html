@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+        function calculateGrade(){
+            var nGrade =document.getElementById('numberGrade').value;
+            var lGrade = '';
+            if (nGrade>=90){
+                lGrade ='A'
+            }
+            else if (nGrade>=80){
+                lGrade='B'
+            }
+            else if (nGrade>=70){
+                lGrade='C'
+            }
+            else if (nGrade>=60){
+                lGrade='D'
+            }            
+            else {
+                lGrade='F'
+            }
+            document.getElementById('letterGrade').innerText=lGrade;
+        }
+        </script>
+    </head>
+    <body>
+        <input type="number" min=0 max=100 id='numberGrade'><br>
+        <button value='Calculate Letter Grade' onclick='calculateGrade();'>Calculate Letter Grade</button><br>
+        <span id="letterGrade"></span>
+    </body>
+</html>
